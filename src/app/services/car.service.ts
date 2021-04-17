@@ -8,7 +8,7 @@ import { DataResponseModel } from '../models/dataResponseModel';
   providedIn: 'root'
 })
 export class CarService {
-  apiUrl = "https://localhost:44371/api/cars/getall" 
+  apiUrl = "https://localhost:44371/api/cars/getcarsdetails" 
   constructor(private httpClient:HttpClient ) {}
 
   getCars() :Observable<DataResponseModel<CarDetail[]>> {
