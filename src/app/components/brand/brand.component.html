@@ -5,13 +5,18 @@
         </div>
     </div>
 </div>
-<table class="table">
+<table class="table table-dark ">
+
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Marka Adı</th>
+            <th scope="col">Id</th>
+            <th scope="col">Marka Adı</th>
+        </tr>
     </thead>
-    <tr *ngFor="let brand of brands">
-        <td>{{brand.id}}</td>
-        <td>{{brand.name}}</td>
+    <tbody>
+        <tr *ngFor="let brand of brands">
+            <td>{{brand.id}}</td>
+            <td>{{brand.name}}</td>
+        </tr>
+    </tbody>
 </table>

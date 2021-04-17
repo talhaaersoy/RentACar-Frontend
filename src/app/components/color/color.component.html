@@ -1,4 +1,11 @@
-<table>
+<div *ngIf="dataLoaded == false">
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+<table class="table table-dark table-striped">
     <thead>
         <tr>
             <th scope="col">Id</th>
