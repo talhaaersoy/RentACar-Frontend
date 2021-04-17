@@ -1,0 +1,10 @@
+.bg-danger{
+    background-color: darkred !important;
+}
+.container{
+    background-color: #404040;
+}
+.main-container{
+    background-color: #404040;
+   background-size: cover;
+}
