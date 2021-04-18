@@ -14,7 +14,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let brand of brands">
+        <tr (click)="clearCurrentBrand()"
+         routerLink="/cars"
+          (class)="getAllBrandClass()">
+            <th class="custom-element">Tüm Markalar</th>
+            <th></th>
+        </tr>
+        <tr (click)="setCurrentBrand(brand)"
+         *ngFor="let brand of brands" 
+         routerLink="/cars/brand/{{brand.id}}"
+            (class)="getCurrentBrand()">
             <td>{{brand.id}}</td>
             <td>{{brand.name}}</td>
         </tr>

@@ -10,6 +10,7 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {
   
   brands:Brand[] =[];
+  currentBrand:Brand | undefined;
   dataLoaded = false;
   constructor( private brandService:BrandService) {}
 
@@ -22,5 +23,29 @@ export class BrandComponent implements OnInit {
       this.dataLoaded = true;
     })
   }
+  setCurrentBrand(brand:Brand){
+    this.currentBrand=brand
+  }
+  getCurrentBrand(){
+    if(!this.currentBrand){
+      return "list-group-item danger"
+    }
+    else{
+      return "list-group-item"
+    }
+  }
+  clearCurrentBrand(){
+    this.currentBrand=undefined;
+  }
+  getAllBrandClass(){
+   
+    if(!this.currentBrand){
+      return "list-group-item danger"
+    } 
+    else {
 
+      return "list-group-item "
+    }
+
+  }
 }
