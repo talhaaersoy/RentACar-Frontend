@@ -8,6 +8,7 @@ import { ColorService } from 'src/app/services/color.service';
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent implements OnInit {
+  currentColor  : Color | undefined;
   colors:Color[] = [];
   dataLoaded:boolean = false;
   constructor(private colorService:ColorService) { }
@@ -20,6 +21,13 @@ export class ColorComponent implements OnInit {
       this.colors = response.data;
       this.dataLoaded = true;
     })
-}
+  }
+  setCurrentColor(color:Color){
+    this.currentColor = color;
+  }
+  clearCurrentColor(){
+    
+  }
+
 
 }
